@@ -26,7 +26,7 @@ function CheckoutProduct({togglebtn=1, id, image, title, price, rating }) {
 							<p key={i}>⭐</p>
 						))}
 				</div>
-				{(togglebtn===1) && <button onClick={handleRemove}>Remove From Basket</button>}
+				{(togglebtn===1) && <button className="remove-btn" onClick={handleRemove}>Remove From Basket</button>}
 			</div>
 		</div>
 	);

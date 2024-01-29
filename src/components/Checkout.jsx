@@ -16,6 +16,7 @@ function Checkout() {
 
 					{basket.map((item) => (
 						<CheckoutProduct
+							key={Math.random()}
 							id={item.id}
 							image={item.image}
 							title={item.title}

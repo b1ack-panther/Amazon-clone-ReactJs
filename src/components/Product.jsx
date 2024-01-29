@@ -1,13 +1,10 @@
 import React from "react";
 import "../style/Product.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToBasket } from "../store/BasketSlice";
 
 function Product({ id, title, image, price, rating }) {
 	const dispatch = useDispatch();
-	const basket = useSelector((state) => {
-		return state.basket;
-	});
 
 	const addNewItem = () => {
 		dispatch(

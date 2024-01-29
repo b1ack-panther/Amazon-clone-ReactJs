@@ -1,5 +1,6 @@
 .checkoutProduct {
-	display: flex;
+	display: grid;
+	grid-template-columns: 200px 1fr;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -26,4 +27,8 @@
 .checkoutProduct_title {
 	font-size: 17px;
 	font-weight: 800;
+}
+
+.remove-btn{
+	padding: 5px;
 }

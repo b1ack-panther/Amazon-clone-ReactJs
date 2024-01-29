@@ -1,0 +1,105 @@
+.category-result {
+	padding: 10px max(10px, 2vw);
+}
+
+.category-result > p {
+	font-size: 14px;
+	color: #565959;
+	margin-bottom: 10px;
+}
+
+.product-cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.product-card {
+	flex: 1 1 290px;
+	padding: 10px;
+	border: 1px solid #b8baba;
+	border-radius: 4px;
+	overflow: hidden;
+	text-decoration: none;
+	color: black;
+
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+
+	.brand{
+		text-align: center;
+		font-weight: 500;
+	}
+
+	div:first-child {
+		background-color: #f7f7f7;
+		margin: -10px;
+		margin-bottom: 0px;
+		height: 200px;
+		display: grid;
+		place-content: center;
+		img {
+			max-height: 230px;
+			max-width: 80%;
+			margin: auto;
+			mix-blend-mode: darken;
+		}
+	}
+
+	h3 {
+		font-size: 17px;
+		font-weight: 400;
+	}
+	p {
+		font-size: 13px;
+		color: #6a6e6e;
+		.review {
+			color: rgb(57, 133, 180);
+		}
+		.rating-text {
+			display: block;
+			margin-top: -3px;
+			margin-bottom: 3px;
+		}
+	}
+	button {
+		width: 120px;
+		padding: 3px;
+		background-color: #b12704;
+		color: white;
+		border: none;
+		font-size: 13px;
+		cursor: pointer;
+	}
+
+	.price {
+		margin-top: 5px;
+		font-size: 28px;
+		line-height: 0.9;
+		.rupee-sign {
+			font-size: 13px;
+			vertical-align: top;
+		}
+		.original-price {
+			font-size: 14px;
+			color: #6a6e6e;
+		}
+	}
+	.delivery {
+    margin-top: 3px;
+		display: flex;
+		align-items: flex-start;
+		gap: 3px;
+		img {
+			display: block;
+      width: 60px;
+      margin: 2px 0;
+		}
+		p {
+			font-size: 14px;
+			color: black;
+			display: inline;
+		}
+	}
+}

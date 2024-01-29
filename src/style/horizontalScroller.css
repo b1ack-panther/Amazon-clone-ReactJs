@@ -1,0 +1,81 @@
+.horizontal-scroller{
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.horizontal-scroller::-webkit-scrollbar{
+  display: none;
+}
+
+.hcCard{
+  width: 250px;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  cursor: pointer;
+  
+  div{
+    background-color: #F7F8F8;
+    width: 100%;
+    img{
+      margin: 10px auto;
+      height: 200px;
+      max-width: 200px;
+      object-fit: cover;
+      mix-blend-mode: darken;
+    }
+  }
+  .dotdText{
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #cc0c39;
+    span{
+      border-radius: 2px;
+      padding: 4px;
+      margin-right: 5px;
+      color: white;
+      font-weight: normal;
+      background-color: #CC0C39;
+    }
+  }
+  .title{
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;    
+  }
+
+}
+
+  .left-arrow, .right-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width:40px;
+    height:80px;
+    background-color: rgba(255, 255, 255, 0.826);
+    box-shadow: 0 0 10px -2px rgb(142, 135, 135);
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+
+    svg{
+      height: 80px;
+      width: 40px;
+    }
+  }
+  .left-arrow{
+    left: 20px;
+    border-radius: 0 3px 3px 0;
+
+  }
+  .right-arrow{
+    right: 20px;
+    border-radius: 3px 0 0 3px;
+  }
