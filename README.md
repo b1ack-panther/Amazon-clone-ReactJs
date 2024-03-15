@@ -1,1 +1,1 @@
-https://challenge-c55fa.web.app/
+https://amazon-clone-react-js-three.vercel.app/
