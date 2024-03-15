@@ -21,39 +21,119 @@ function ImageSlider() {
 	//   return () => clearTimeout(timeRef.current);
 	// }, [activeIndex])
 
-  const settings = {
+	function SampleNextArrow(props) {
+		const { className, style, onClick } = props;
+		return (
+			<div
+				className={className}
+				style={{
+					...style,
+					display: "block",
+					background: "red",
+					height: "40px",
+					width: "40px",
+					zIndex: 1000,
+				}}
+				onClick={onClick}
+			>
+				<h2>next page</h2>
+			</div>
+		);
+	}
+
+	function SamplePrevArrow(props) {
+		const { className, style, onClick } = props;
+		return (
+			<div
+				className={className}
+				style={{ ...style, display: "block", background: "green" }}
+				onClick={onClick}
+			/>
+		);
+	}
+
+	const settings = {
 		dots: true,
 		infinite: true,
 		speed: 500,
 		slidesToShow: 1,
 		sliderToScroll: 1,
 		autoplay: true,
+		// centerPadding: "10px",
+		// centerMode: true,
 		autoplaySpeed: 4000,
-		arrows: false,
+		arrows: true,
+		nextArrow: <SampleNextArrow />,
+		prevArrow: <SamplePrevArrow />,
+		pauseOnHover: false,
 	};
-  return (
-    <div className="slider">
-      <Slider {...settings}>
-        <div><img style={{width: "100%", height: "100%"}} src={sliderImg[0]} alt="sliderImage" /></div>
-        <div><img style={{width: "100%", height: "100%"}} src={sliderImg[1]} alt="sliderImage" /></div>
-        <div><img style={{width: "100%", height: "100%"}} src={sliderImg[2]} alt="sliderImage" /></div>
-        <div><img style={{width: "100%", height: "100%"}} src={sliderImg[3]} alt="sliderImage" /></div>
-        <div><img style={{width: "100%", height: "100%"}} src={sliderImg[4]} alt="sliderImage" /></div>
-        <div><img style={{width: "100%", height: "100%"}} src={sliderImg[5]} alt="sliderImage" /></div>
-        <div><img style={{width: "100%", height: "100%"}} src={sliderImg[6]} alt="sliderImage" /></div>
-      </Slider>
+
+	return (
+		<div className="slider">
+			<Slider {...settings}>
+				<div>
+					<img
+						style={{ width: "100%", height: "100%" }}
+						src={sliderImg[0]}
+						alt="sliderImage"
+					/>
+				</div>
+				<div>
+					<img
+						style={{ width: "100%", height: "100%" }}
+						src={sliderImg[1]}
+						alt="sliderImage"
+					/>
+				</div>
+				<div>
+					<img
+						style={{ width: "100%", height: "100%" }}
+						src={sliderImg[2]}
+						alt="sliderImage"
+					/>
+				</div>
+				<div>
+					<img
+						style={{ width: "100%", height: "100%" }}
+						src={sliderImg[3]}
+						alt="sliderImage"
+					/>
+				</div>
+				<div>
+					<img
+						style={{ width: "100%", height: "100%" }}
+						src={sliderImg[4]}
+						alt="sliderImage"
+					/>
+				</div>
+				<div>
+					<img
+						style={{ width: "100%", height: "100%" }}
+						src={sliderImg[5]}
+						alt="sliderImage"
+					/>
+				</div>
+				<div>
+					<img
+						style={{ width: "100%", height: "100%" }}
+						src={sliderImg[6]}
+						alt="sliderImage"
+					/>
+				</div>
+			</Slider>
 			{/* <div
 				className="slider-flex"
-				style={{
+				
+			//
+			<div style={{
 					transform: `translateX(${-activeIndex * 100}vw)`,
 				}}
-			>
-				{sliderImg.map((img, index) => (
-					<img key={index} src={img} alt="sliderImg" />
-				))}
-			</div>
-			<div className="slider-dots">
-				{sliderImg.map((_, index) => (
+			 style={{height: "200px", width: "100%" , backgroundColor: "redlightsalmon}>
+			// 	{sliderImg.map((img, index) => (>Box</div> 		<img key={index} src={img} alt="sliderImg" />
+			// 	))}
+			// </div>
+			// <div className="slider-dots">
+			// 	{sliderImg.map((_, index) => (
 					<div
 						key={index}
 						style={{ color: `${index === activeIndex ? "#2008" : ""}` }}

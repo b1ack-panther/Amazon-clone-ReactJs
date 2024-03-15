@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import "../style/Home.css";
 import Product from "./Product";
 import ImageSlider from "./ImageSlider.jsx";
-import { categoryLists, dealsOfTheDay, mainPageGrids } from "../assets/assets.js";
+import {
+	categoryLists,
+	dealsOfTheDay,
+	mainPageGrids,
+} from "../assets/assets.js";
 import GridCard from "./GridCard.jsx";
 import { Outlet } from "react-router-dom";
 import HorizontalScroller from "./category/HorizontalScroller.jsx";
